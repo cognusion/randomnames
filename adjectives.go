@@ -12,7 +12,7 @@ func init() {
 }
 
 func RandomAdjective() string {
-	return Adjectives[rand.Intn(nameListSize)]
+	return Adjectives[rand.Intn(adjSize)]
 }
 
 func SafeRandomAdjective() string {
