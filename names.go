@@ -11,10 +11,12 @@ func init() {
 	nameListSize = len(Names)
 }
 
+// RandomName returns a pseudo-random name from the list
 func RandomName() string {
 	return Names[rand.Intn(nameListSize)]
 }
 
+// SafeRandomName returns a pseudo-random name from the list goro-safely
 func SafeRandomName() string {
 	nameSafety.Lock()
 	s := RandomName()

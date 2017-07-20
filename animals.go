@@ -11,10 +11,12 @@ func init() {
 	animalSize = len(Animals)
 }
 
+// RandomAnimal returns a pseudo-random animal from the list
 func RandomAnimal() string {
 	return Animals[rand.Intn(animalSize)]
 }
 
+// SafeRandomAnimal returns a pseudo-random animal from the list goro-safely
 func SafeRandomAnimal() string {
 	nameSafety.Lock()
 	s := RandomAnimal()

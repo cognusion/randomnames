@@ -11,10 +11,12 @@ func init() {
 	adjSize = len(Adjectives)
 }
 
+// RandomAdjective returns a pseudo-random adjective from the list
 func RandomAdjective() string {
 	return Adjectives[rand.Intn(adjSize)]
 }
 
+// SafeRandomAdjective returns a pseudo-random adjective from the list goro-safely
 func SafeRandomAdjective() string {
 	adjSafety.Lock()
 	s := RandomAdjective()
